@@ -10,6 +10,7 @@ img{
     background-color: aquamarine;
     padding: 50px;
     border: 10px solid blue;
+    margin: 50px;
 }
 
 #spanId{
