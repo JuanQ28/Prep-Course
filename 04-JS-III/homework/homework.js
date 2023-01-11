@@ -72,10 +72,11 @@ function arrayContiene(array, elemento) {
   for(var i=0; i<array.length; i++)
   {
 
-if(array[i]===elemento)
-{return true}
-
+    if(array[i]===elemento){
+      return true}
+  
   }
+
 return false;
 }
 
@@ -88,8 +89,9 @@ var contenedor=0;
 
  for(var i=0; i<numeros.length; i++)
  {
-contenedor= contenedor + numeros[i];
+  contenedor= contenedor + numeros[i];
  }
+
  return contenedor;
 }
 
@@ -102,10 +104,9 @@ var promedio=0;
 
   for(var i=0; i<resultadosTest.length; i++)
   {
-
-promedio= promedio + resultadosTest[i];
-
+    promedio= promedio + resultadosTest[i];
   }
+
 promedio= promedio/resultadosTest.length;
 return promedio;
 
@@ -117,15 +118,17 @@ function numeroMasGrande(numeros) {
   // Devuelve el número más grande
   // Tu código:
 var numeromayor=0;
+
   for (var i=0; i<numeros.length; i++)
 {
 
-if (numeromayor<numeros[i])
-{
-numeromayor=numeros[i];  
-}
+  if (numeromayor<numeros[i])
+  {
+    numeromayor=numeros[i];  
+  }
 
 }
+
 return numeromayor;
 }
 
@@ -137,16 +140,20 @@ function multiplicarArgumentos() {
 
 var multi=1;
 
-if(arguments.length===0)
-{return 0;}
+if(arguments.length===0){
+  return 0;
+}
+
 else
 {
-for(var i=0; i<arguments.length; i++)
-{
-multi= arguments[i] * multi;  
-}
+  for(var i=0; i<arguments.length; i++)
+  {
+    multi= arguments[i] * multi;  
+  }
+
 return multi;
 }
+
 }
 
 
@@ -154,12 +161,13 @@ function cuentoElementos(arreglo){
   //Realiza una función que retorne la cantidad de los elementos del arreglo cuyo valor es mayor a 18.
   //Escribe tu código aquí
 var contador=0;
+
 for (var i=0; i<arreglo.length; i++)
 {
-if(18<arreglo[i])
-{
-contador++;
-}
+  if(18<arreglo[i])
+  {
+    contador++;
+  }
 }
 
 return contador;
@@ -172,10 +180,13 @@ function diaDeLaSemana(numeroDeDia) {
   //si el día corresponde a Sábado o Domingo y “Es dia Laboral” en caso contrario. 
   //Escribe tu código aquí   
 
-if(numeroDeDia===1 || numeroDeDia===7)
-{return 'Es fin de semana';}
-else
-{return 'Es dia Laboral';}
+if(numeroDeDia===1 || numeroDeDia===7){
+  return 'Es fin de semana';
+}
+
+else{
+  return 'Es dia Laboral';
+}
 
 } 
 
@@ -184,7 +195,7 @@ function empiezaConNueve(n) {
   //Desarrolle una función que recibe como parámetro un número entero n. Debe retornar true si el entero 
   //inicia con 9 y false en otro caso.
   //Escribe tu código aquí
- 
+/* 
   var resp = n.toString().split('');
   
   var newResp = resp.filter(iterator => iterator[0] === '9');
@@ -195,6 +206,13 @@ function empiezaConNueve(n) {
   } else {
     return false;
   }
+*/
+
+var resp = n.toString().split('');
+
+if(resp[0]==='9')return true;
+else return false;
+
 }
 
 
@@ -223,6 +241,7 @@ function mesesDelAño(array) {
   // Tu código:
 
 var meses=array.filter(mes => mes==='Enero' || mes==='Marzo' || mes==='Noviembre');
+
 if(meses[2]===undefined)
 {return 'No se encontraron los meses pedidos';}
 return meses;

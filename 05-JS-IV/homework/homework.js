@@ -40,8 +40,9 @@ function multiplicarNumeroDesconocidoPorCinco (objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-var producto= objetoMisterioso.numeroMisterioso * 5;
-return producto;
+
+return objetoMisterioso.numeroMisterioso * 5;
+
 }
 
 function eliminarPropiedad (objeto, unaPropiedad) {
@@ -60,12 +61,11 @@ function nuevoUsuario (nombre, email, password) {
   // Tu código:
 
 var  objeto={
-
-nombre:nombre,
-email:email,
-password:password
-
+  nombre:nombre,
+  email:email,
+  password:password
 }
+
 return objeto;
 }
 
@@ -103,6 +103,7 @@ function verificarPassword (usuario, password) {
 if(usuario['password'] === password) return true;
 
 return false;
+
 }
 
 function actualizarPassword (usuario, nuevaPassword) {
